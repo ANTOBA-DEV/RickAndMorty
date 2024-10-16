@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <h1>Personajes y Episodios</h1> <!-- Reemplazo de header-title -->
+    <div class="card-grid" *ngIf="charData.length > 0;">
+      <div *ngFor="let char of charData">
+        <h2>{{ char.name }}</h2> <!-- Reemplazo de card-title -->
+        <img [src]="char.image" class="card-image" alt="{{ char.name }}"> <!-- Evento click -->
+        <p class="card-text"><b>Estado:</b> {{ char.status }}</p>
+        <p class="card-text"><b>Especie:</b> {{ char.species }}</p>
+        <button class="card-button" (click)="toggleEpisodes(char)" style="cursor: pointer;">Ver Episodios:</button>
+        
+        <ul *ngIf="char.showEpisodes && char.episodesDetails.length > 0" class="episode-list">
+          <li *ngFor="let episode of char.episodesDetails; let i = index" class="episode-item" [hidden]="i > 10">
+            {{ episode.episode }} - {{ episode.name }} ({{ episode.air_date }})
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

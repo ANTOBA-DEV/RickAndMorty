@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body { 
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5;
+    color: #333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.card-grid {
+    background-color: #333; /* Fondo oscuro para tarjetas */
+    border-radius: 12px;
+    padding: 25px;
+    margin: 15px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Rejilla dinámica */
+    gap: 15px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.card-button {
+    background-color: #444;
+    padding: 12px;
+    color: #fff;
+    border-style: solid;
+    border-radius: 6px;
+    margin: 6px 0;
+    transition: background-color 0.3s ease;
+}
+.card-button:hover {
+    border-color: #555;
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+.card-title {
+    font-size: 1.6rem;
+    color: #4CAF50; /* Verde más sutil */
+}
+
+.card-text {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.episode-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.episode-item {
+    background-color: #444;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 6px 0;
+    color: #fff;
+}
